@@ -10,6 +10,11 @@ const prodcutsModel = {
     const { insertId } = result;
     return { id: insertId, ...data };
   },
+  async getAll(): Promise<Produto[]> {
+    const query = 'SELECT * FROM Trybesmith.Products';
+    const [result] = await connection.execute(query);
+    return result as Produto[];
+  },
 };
 
 export default prodcutsModel;
