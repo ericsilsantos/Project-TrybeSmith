@@ -10,3 +10,8 @@ export interface Usuario {
   level: number,
   password?: string,
 }
+export interface Pedido {
+  id?: number,
+  userId?: number,
+  productsIds?: number[],
+}
